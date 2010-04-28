@@ -3,18 +3,23 @@ from markov import Chain
 import re
 
 poem = """
-Bye, baby bunting
-Daddy's gone a hunting
-To get a little rabbit skin
-To wrap his baby bunting in
-Bye, baby bunting
-Daddy's gone a hunting
-To get a little lambie skin
-To wrap his baby bunting in
-Bye, baby bunting
-Daddy's gone a hunting
-A rosy wisp of cloud to win
-To wrap his baby bunting in
+Good night, sleep tight,
+Don't let the bedbugs bite.
+And if they do
+Then take your shoe
+And knock 'em 'til
+They're black and blue!
+
+Baa, baa black sheep
+Have you any wool
+Yes sir, yes sir
+Three bags full.
+
+One for my master
+And one for my dame
+And one for the little boy
+Who lives down the lane.
+
 
 The Sandman's coming in his train of cars
 With moonbeam windows and with wheels of stars
