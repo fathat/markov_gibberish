@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import random
 
-
 class Chain(object):
     def __init__(self, input, window_size):
         self.root = Link(None)
@@ -14,7 +13,17 @@ class Chain(object):
         return [x.data for x in
                 self.root.generate(start_word, self.window_size, max)
                 if x.data]
-        
+
+class Window(object):
+    def __init__(self, window_size):
+        self.data = []
+        self.window_size = window_size
+    
+    def add(self, thing):
+        if len(self.data) >= self.window_size:
+            del self.data[0]
+        self.data.append(thing)
+
 
 class Link(object):
     def __init__(self, data):
@@ -34,16 +43,14 @@ class Link(object):
         self.count += 1
 
     def process(self, input, window_size):
-        current_window = []
+        current_window = Window(window_size)
         for x in input:
-            if len(current_window) == window_size:
-                del current_window[0]
-            current_window.append(x)
+            current_window.add(x)
             self.process_window(current_window)
     
     def process_window(self, window):
         link = self
-        for x in window:
+        for x in window.data:
             link = link.process_word(x)
     
     def process_word(self, part):
@@ -69,23 +76,22 @@ class Link(object):
     
     def follow_window(self, window):
         link = self
-        for w in window:
+        for w in window.data:
             link = link.follow(w)
             if not link: return None
         return link
     
     def generate(self, start, window_size, max):
         rval = []
-        window = [start]
+        window = Window(window_size-1)
+        window.add(start)
         link = self.follow_window(window)
         
         while link != None and max != 0:
             next = link.select_random_link()
-            if len(window) == window_size-1:
-                del window[0]
             if next:
                 rval.append(link)
-                window.append(next.data)
+                window.add(next.data)
             link = self.follow_window(window)
             max -= 1
         return rval
