@@ -1,0 +1,28 @@
+This is some code I wrote for playing around with Markov chains to generate random poems and words.
+
+It turns out most of these poems end up sounding really dark, and most of the words end up sounding inappropriate. Further proof that technology is witchcraft, I'd say. 
+
+Here's an example output from make_poem.py: 
+
+    jack sprat was wheeling,
+    his wife could eat no lean
+    and when they were down, they were down, they were down
+    and when they were only halfway up
+    they licked the hill
+    and he had ten thousand men
+    he marched them up nor down. 
+
+
+(It almost makes sense!)
+
+Sometimes it will actually say something rather profound:
+
+    and when they were down, they were neither up nor down. 
+
+You can seed it with anything, but it will almost always end up sounding really really creepy. Some might say that's it's charm.
+
+Here's an example of words it might come up with:
+
+    dingsbidentalun, ingvow, harpergrippers, exexpos, calctufacal, hornwormgapingly, added, ginyodelledyodeling, mosparamosver, iciambusbiesrara, rateexcrete, planu, loaninggleaner, liotscheviesex, idoimpark, sorsorsorsor, spondreverts, mascurassubraces, mucoscis, carryons, bryosalaninsrule, corumcimba, ing, ousstrat, un, piliformen, biesbachi, , helicpari, heartilyflash
+
+I'll ingvow your harpergrippers!!! THAT'S CALCTUFACAL!

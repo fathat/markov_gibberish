@@ -3,33 +3,34 @@ from markov import Chain
 import re
 
 poem = """
-Good night, sleep tight,
-Don't let the bedbugs bite.
-And if they do
-Then take your shoe
-And knock 'em 'til
-They're black and blue!
 
-Baa, baa black sheep
-Have you any wool
-Yes sir, yes sir
-Three bags full.
+Jack Sprat could eat no fat
+His wife could eat no lean
+And so betwixt the two of them
+They licked the platter clean
 
-One for my master
-And one for my dame
-And one for the little boy
-Who lives down the lane.
+Jack ate all the lean,
+Joan ate all the fat.
+The bone they picked it clean,
+Then gave it to the cat
 
+Jack Sprat was wheeling,
+His wife by the ditch.
+The barrow turned over,
+And in she did pitch.
 
-The Sandman's coming in his train of cars
-With moonbeam windows and with wheels of stars
-So hush you little ones and have no fear
-The man-in-the-moon he is the engineer
+Says Jack, "She'll be drowned!"
+But Joan did reply,
+"I don't think I shall,
+For the ditch is quite dry.".
 
-The railroad track tis a moonbeam bright
-That leads right up into the starry night
-
-So put on you 'jamas and say your prayers
+The Grand old Duke of York he had ten thousand men
+He marched them up to the top of the hill
+And he marched them down again.
+When they were up, they were up
+And when they were down, they were down
+And when they were only halfway up
+They were neither up nor down. 
 """
 
  
